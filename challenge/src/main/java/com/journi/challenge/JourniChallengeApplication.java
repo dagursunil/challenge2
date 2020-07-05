@@ -30,7 +30,7 @@ public class JourniChallengeApplication {
 	    }
 	 
 	 private ApiInfo generateApiInfo() {
-	        return new ApiInfo("Wallet Test Service", " A jouni test challange \n"
+	        return new ApiInfo("A Journi challenge", " A journi test challange \n"
 	                , "Version 1.0",
 	                "urn:tos", "Sunil Kumar", "Apache 2.0", "http://www.apache.org/licenses/LICENSE-2.0");
 	    }
