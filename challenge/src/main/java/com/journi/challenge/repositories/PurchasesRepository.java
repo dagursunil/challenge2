@@ -87,7 +87,7 @@ public class PurchasesRepository {
                 totalAmountPurchases,
                 totalAmountPurchases / countPurchases,
                 recentPurchases.stream().mapToDouble(Purchase::getTotalValue).min().orElse(0.0),
-                recentPurchases.stream().mapToDouble(Purchase::getTotalValue).min().orElse(0.0)
+                recentPurchases.stream().mapToDouble(Purchase::getTotalValue).max().orElse(0.0)
         );
         }
         else {
@@ -98,7 +98,7 @@ public class PurchasesRepository {
                      totalAmountPurchases,
                      0.0,
                      recentPurchases.stream().mapToDouble(Purchase::getTotalValue).min().orElse(0.0),
-                     recentPurchases.stream().mapToDouble(Purchase::getTotalValue).min().orElse(0.0)
+                     recentPurchases.stream().mapToDouble(Purchase::getTotalValue).max().orElse(0.0)
              );
         }
     }
