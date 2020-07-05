@@ -89,7 +89,7 @@ class PurchasesControllerTest {
         purchasesRepository.save(new Purchase("8", firstDate.plusDays(7), Collections.emptyList(), "c2", 10.0));
         purchasesRepository.save(new Purchase("9", firstDate.plusDays(8), Collections.emptyList(), "c1", 10.0));
         purchasesRepository.save(new Purchase("10", firstDate.plusDays(9), Collections.emptyList(), "c1", 10.0));
-        purchasesRepository.save(new Purchase("11", firstDate.plusDays(30), Collections.emptyList(), "c1", 10.0));
+        purchasesRepository.save(new Purchase("11", firstDate.plusDays(30), Collections.emptyList(), "c1", 21.0));
         
 
         // Outside window purchases
@@ -106,10 +106,10 @@ class PurchasesControllerTest {
         assertEquals(formatter.format(firstDate), purchaseStats.getFrom());
         assertEquals(formatter.format(firstDate.plusDays(30)), purchaseStats.getTo());
         assertEquals(11, purchaseStats.getCountPurchases());
-        assertEquals(110.0, purchaseStats.getTotalAmount());
-        assertEquals(10.0, purchaseStats.getAvgAmount());
+        assertEquals(121.0, purchaseStats.getTotalAmount());
+        assertEquals(11, purchaseStats.getAvgAmount());
         assertEquals(10.0, purchaseStats.getMinAmount());
-        assertEquals(10.0, purchaseStats.getMaxAmount());
+        assertEquals(21.0, purchaseStats.getMaxAmount());
        
     }
     
