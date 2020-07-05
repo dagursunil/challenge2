@@ -22,7 +22,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+/**
+ * This class is implementation for product end points .
+ * @author sdagar
+ *
+ */
 @RestController
 public class ProductsController {
 
@@ -31,6 +35,11 @@ public class ProductsController {
     @Inject
     private CurrencyConverter currencyConverter;
 
+    /**
+     * This method will return all available product list.
+     * @param countryCode
+     * @return response entity.
+     */
     @GetMapping("/products")
     public ResponseEntity getProdcuctsList(@RequestParam(name = "countryCode", defaultValue = "AT") String countryCode) {
     	

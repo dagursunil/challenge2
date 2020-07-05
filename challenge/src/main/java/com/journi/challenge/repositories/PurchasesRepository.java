@@ -28,14 +28,27 @@ public class PurchasesRepository {
     @Inject
     private CurrencyConverter currencyConverter;
 
+    /**
+     * This method is used to return all purchase.
+     * @return list of purchase.
+     */
     public List<Purchase> list() {
         return allPurchases;
     }
-
+/**
+ * This method is used to save purchase value.
+ * @param purchase
+ */
     public void save(Purchase purchase) {
         allPurchases.add(purchase);
     }
 
+    /**
+     * This method will return statistics for last 30 days
+     * @param customerName
+     * @param currencyCode
+     * @return purchase statistics.
+     */
     public PurchaseStats getLast30DaysStats(String customerName,String currencyCode) {
         DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE.withZone(ZoneId.of("UTC"));
 
@@ -44,7 +57,7 @@ public class PurchasesRepository {
 
         if(StringUtils.isEmpty(customerName)) {
         recentPurchases = allPurchases
-                .stream()
+                .parallelStream()
                 .filter(p -> p.getTimestamp().isAfter(start))
                 .sorted(Comparator.comparing(Purchase::getTimestamp))
                 .collect(Collectors.toList());
@@ -52,7 +65,7 @@ public class PurchasesRepository {
        
         }else {
         	 recentPurchases = allPurchases
-                     .stream()
+                     .parallelStream()
                      .filter(p->p.getCustomerName().equalsIgnoreCase(customerName))
                      .filter(p -> p.getTimestamp().isAfter(start))
                      .sorted(Comparator.comparing(Purchase::getTimestamp))
@@ -91,7 +104,7 @@ public class PurchasesRepository {
     }
     
 	private List<Purchase> convertToInputCurrency(List<Purchase> recentPurchases,String currencyCode) {
-		return recentPurchases.stream()
+		return recentPurchases.parallelStream()
 				.map(a -> new Purchase(a.getInvoiceNumber(), a.getTimestamp(), a.getProductIds(), a.getCustomerName(),
 						currencyConverter.convertEurToCurrency(currencyCode, a.getTotalValue())))
 				.collect(Collectors.toList());

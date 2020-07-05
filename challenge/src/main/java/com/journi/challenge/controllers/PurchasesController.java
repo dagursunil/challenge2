@@ -21,6 +21,11 @@ import com.journi.challenge.models.Purchase;
 import com.journi.challenge.models.PurchaseRequest;
 import com.journi.challenge.models.PurchaseStats;
 import com.journi.challenge.repositories.PurchasesRepository;
+/**
+ * This class is implementation of purchase end points.
+ * @author sdagar
+ *
+ */
 
 @RestController
 public class PurchasesController {
@@ -43,7 +48,11 @@ public class PurchasesController {
 			@RequestParam(name = "currencyCode", defaultValue = "EUR") String currencyCode) {
 		 return new ResponseEntity<PurchaseStats>(purchasesRepository.getLast30DaysStats(customerName,currencyCode), HttpStatus.OK);
 	}
-
+/**
+ * This method is used to save purchaseResquest values.
+ * @param purchaseRequest
+ * @return response entity.
+ */
 	@PostMapping("/purchases")
 	public ResponseEntity save(@RequestBody PurchaseRequest purchaseRequest) {
 
