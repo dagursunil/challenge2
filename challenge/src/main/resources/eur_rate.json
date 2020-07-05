@@ -1,0 +1,132 @@
+{
+  "currencies": [
+    {
+      "currency": "USD",
+      "rate": "1.1187"
+    },
+    {
+      "currency": "JPY",
+      "rate": "119.63"
+    },
+    {
+      "currency": "BGN",
+      "rate": "1.9558"
+    },
+    {
+      "currency": "CZK",
+      "rate": "25.346"
+    },
+    {
+      "currency": "DKK",
+      "rate": "7.4712"
+    },
+    {
+      "currency": "GBP",
+      "rate": "0.86670"
+    },
+    {
+      "currency": "HUF",
+      "rate": "335.70"
+    },
+    {
+      "currency": "PLN",
+      "rate": "4.3029"
+    },
+    {
+      "currency": "RON",
+      "rate": "4.8110"
+    },
+    {
+      "currency": "SEK",
+      "rate": "10.5915"
+    },
+    {
+      "currency": "CHF",
+      "rate": "1.0663"
+    },
+    {
+      "currency": "ISK",
+      "rate": "142.20"
+    },
+    {
+      "currency": "NOK",
+      "rate": "10.3710"
+    },
+    {
+      "currency": "HRK",
+      "rate": "7.4905"
+    },
+    {
+      "currency": "RUB",
+      "rate": "74.3070"
+    },
+    {
+      "currency": "TRY",
+      "rate": "6.8038"
+    },
+    {
+      "currency": "AUD",
+      "rate": "1.6917"
+    },
+    {
+      "currency": "BRL",
+      "rate": "5.1480"
+    },
+    {
+      "currency": "CAD",
+      "rate": "1.5021"
+    },
+    {
+      "currency": "CNY",
+      "rate": "7.7579"
+    },
+    {
+      "currency": "HKD",
+      "rate": "8.6936"
+    },
+    {
+      "currency": "IDR",
+      "rate": "15851.98"
+    },
+    {
+      "currency": "ILS",
+      "rate": "3.8814"
+    },
+    {
+      "currency": "INR",
+      "rate": "82.1530"
+    },
+    {
+      "currency": "KRW",
+      "rate": "1327.01"
+    },
+    {
+      "currency": "MXN",
+      "rate": "22.0737"
+    },
+    {
+      "currency": "MYR",
+      "rate": "4.6532"
+    },
+    {
+      "currency": "NZD",
+      "rate": "1.7744"
+    },
+    {
+      "currency": "PHP",
+      "rate": "56.785"
+    },
+    {
+      "currency": "SGD",
+      "rate": "1.5495"
+    },
+    {
+      "currency": "THB",
+      "rate": "35.295"
+    },
+    {
+      "currency": "ZAR",
+      "rate": "17.2746"
+    }
+  ]
+}
